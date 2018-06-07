@@ -1,2 +1,2 @@
 # spring-cloud-demo
-Spring cloud demo with JDK10
+SpringCloud Version:Edgware.SR3 with JDK10 By Example.
