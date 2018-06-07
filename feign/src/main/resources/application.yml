@@ -1,0 +1,37 @@
+info:
+  description: Feign
+  url: https://localhost:8765/info
+
+server:
+  port: 8765
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+spring:
+  application:
+    name: test-service-feign
+  zipkin:
+    base-url: http://localhost:9411
+  sleuth:
+    sampler:
+      percentage: 1.0
+
+#启用断路器
+feign:
+  hystrix:
+    enabled: true
+
+#启用多断路器监听
+turbine:
+  app-config: test-service-ribbon
+  aggregator:
+    cluster-config: default
+  cluster-name-expression: new String("default")
+
+#取消管理安全认证
+management:
+  security:
+    enabled: false

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozermapper.github.io/schema/bean-mapping"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://dozermapper.github.io/schema/bean-mapping http://dozermapper.github.io/schema/bean-mapping.xsd">
+    <configuration>
+        <stop-on-errors>true</stop-on-errors>
+        <date-format>yyyy-MM-dd HH:mm:ss</date-format>
+        <wildcard>true</wildcard>
+    </configuration>
+    <!-- 默认双向映射 -->
+    <mapping wildcard="false">
+        <class-a>com.demo.dozer.entity.TestComplexSource</class-a>
+        <class-b>com.demo.dozer.entity.TestComplexDestination</class-b>
+        <field>
+            <a>nameSource</a>
+            <b>nameDestination</b>
+        </field>
+    </mapping>
+</mappings>
